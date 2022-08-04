@@ -1,5 +1,5 @@
-// import express from "express";
-import * as express from "express";
+import express from "express";
+// import * as express from "express";
 import setupMiddlewares from "./middlewares";
 import setUpRoutes from "./routes";
 

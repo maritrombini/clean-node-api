@@ -144,7 +144,7 @@ describe("SignUp Controller", () => {
       .spyOn(emailValidatorStub, "isValid")
       .mockReturnValueOnce(false);
     sut.handle(makeFakeRequest());
-    expect(isValidSpy).toHaveBeenCalledWith("any_email@email.com");
+    expect(isValidSpy).toHaveBeenCalledWith("valid_email@email.com");
   });
   test("Should return 500 if EmailValidator throws", async () => {
     const { sut, emailValidatorStub } = makeSut();
