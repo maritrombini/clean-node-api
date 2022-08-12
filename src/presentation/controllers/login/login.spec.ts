@@ -4,10 +4,10 @@ import {
   serverError,
   unauthorized,
   ok,
-} from "../../helpers/http-helper";
+} from "../../helpers//http/http-helper";
 import { MissingParamError } from "../../errors";
 import { HttpRequest, Authentication } from "./login-protocols";
-import { Validation } from "../signup/signup-protocols";
+import { Validation } from "../../protocols/validation";
 
 const makeAuthentication = (): Authentication => {
   class AuthenticationStub implements Authentication {
