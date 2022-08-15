@@ -5,14 +5,14 @@ import {
   AddAccount,
   AddAccountModel,
   HttpRequest,
-  Validation,
 } from "./signup-protocols";
-import { ok, serverError, badRequest } from "../../helpers/http-helper";
+import { ok, serverError, badRequest } from "../../helpers/http/http-helper";
+import { Validation } from "../../protocols/validation";
 
 const makeAddAccount = (): AddAccount => {
   class AddAccountStub implements AddAccount {
     async add(account: AddAccountModel): Promise<AccountModel> {
-      return new Promise((resolve) => resolve(makeFakeAccount()));
+      return new Promise(resolve => resolve(makeFakeAccount()));
     }
   }
   return new AddAccountStub();
