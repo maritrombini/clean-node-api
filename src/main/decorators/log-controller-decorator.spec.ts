@@ -4,8 +4,8 @@ import {
   HttpRequest,
   HttpResponse,
 } from "../../presentation/protocols";
-import { LogControllerDecorator } from "./log";
-import { LogErrorRepository } from "../../data/protocols/db/log-error-repository";
+import { LogControllerDecorator } from "./log-controller-decorator";
+import { LogErrorRepository } from "../../data/protocols/db/log/log-error-repository";
 import { AccountModel } from "../../domain/models/account";
 
 const makeController = (): Controller => {

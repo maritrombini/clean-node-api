@@ -3,7 +3,7 @@ import {
   AddAccountModel,
   AccountModel,
   Hasher, AddAccountRepository
-} from "./db-add-account-protocols";
+} from "../add-account/db-add-account-protocols";
 
 const makeHasher = (): Hasher => {
   class HasherStub implements Hasher {

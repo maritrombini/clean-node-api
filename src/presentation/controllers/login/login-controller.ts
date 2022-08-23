@@ -9,7 +9,7 @@ import {
   HttpRequest,
   HttpResponse,
   Authentication,
-} from "./login-protocols";
+} from "./login-controller-protocols";
 import { Validation } from "../../protocols/validation";
 
 export class LoginController implements Controller {
