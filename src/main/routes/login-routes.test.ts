@@ -34,6 +34,15 @@ describe("POST /login", () => {
         password: "456"
       })
       .expect(200);
-    });
   })
-});
+  test("Should return 401 on login", async () => {
+    await request(app)
+      .post("/api/login")
+      .send({
+        email: "mari@email.com",
+        password: "456"
+      })
+      .expect(401);
+    });
+  });
+})
